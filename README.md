@@ -1,6 +1,6 @@
 # Flaky Server
 
-HTTP server that will inconsistently server 200 and 500 responses.
+HTTP server that will inconsistently respond with 200 and 500 responses.
 
 ## Install
 ```
