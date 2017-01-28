@@ -2,6 +2,11 @@
 
 HTTP server that will inconsistently server 200 and 500 responses.
 
+## Install
+```
+go get github.com/bengadbois/flakyserver
+```
+
 ```
 Usage of flakyserver:
   -errorPercent float
