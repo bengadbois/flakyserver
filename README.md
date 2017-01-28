@@ -13,4 +13,6 @@ Usage of flakyserver:
         Percentage of the requests that should return a server error (default 50)
   -port int
         Which port to listen on (default 8899)
+  -timeout int
+        Maximum amount of time to randomly stall (milliseconds)
 ````
