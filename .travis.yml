@@ -3,6 +3,12 @@ language: go
 go:
   - 1.7.x
   - 1.8
+  - tip
+
+matrix:
+  allow_failures:
+    - go: tip
+  fast_finish: true
 
 before_install:
   - go get github.com/mitchellh/gox
