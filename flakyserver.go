@@ -14,9 +14,9 @@ var badPercentPtr *float64
 var timeoutPtr *int
 
 func main() {
-	portPtr = flag.Int("port", 8899, "Which port to listen on")
-	badPercentPtr = flag.Float64("errorPercent", 50, "Percentage of the requests that should return a server error")
-	timeoutPtr = flag.Int("timeout", 0, "Maximum amount of time to randomly stall (milliseconds)")
+	portPtr = flag.Int("p", 8899, "Which port to listen on")
+	badPercentPtr = flag.Float64("e", 50, "Percentage of the requests that should return a server error")
+	timeoutPtr = flag.Int("t", 0, "Maximum amount of time to randomly stall (milliseconds)")
 	flag.Parse()
 
 	h := &handler{}
