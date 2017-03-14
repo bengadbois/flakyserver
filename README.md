@@ -1,4 +1,4 @@
-# Flaky Server
+# Flaky Server [![Travis](https://img.shields.io/travis/bengadbois/flakyserver.svg?branch=master&style=flat-square)](https://travis-ci.org/bengadbois/flakyserver)
 
 HTTP server that will inconsistently respond with 200 and 500 responses.
 
