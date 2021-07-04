@@ -46,13 +46,13 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 		_, err := w.Write([]byte("Flaky Server had an error"))
 		if err != nil {
-			fmt.Println(err)
+			log.Println(err)
 		}
 	} else {
 		w.WriteHeader(http.StatusOK)
 		_, err := w.Write([]byte("Flaky Server succeeded"))
 		if err != nil {
-			fmt.Println(err)
+			log.Println(err)
 		}
 	}
 }
