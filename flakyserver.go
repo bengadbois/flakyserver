@@ -44,9 +44,15 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	if rand.Float64()*100 < *badPercentPtr {
 		w.WriteHeader(http.StatusInternalServerError)
-		w.Write([]byte("Flaky Server had an error"))
+		_, err := w.Write([]byte("Flaky Server had an error"))
+		if err != nil {
+			fmt.Println(err)
+		}
 	} else {
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Flaky Server succeeded"))
+		_, err := w.Write([]byte("Flaky Server succeeded"))
+		if err != nil {
+			fmt.Println(err)
+		}
 	}
 }
